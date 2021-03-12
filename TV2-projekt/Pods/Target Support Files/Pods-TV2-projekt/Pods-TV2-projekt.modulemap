@@ -1,0 +1,6 @@
+framework module Pods_TV2_projekt {
+  umbrella header "Pods-TV2-projekt-umbrella.h"
+
+  export *
+  module * { export * }
+}
