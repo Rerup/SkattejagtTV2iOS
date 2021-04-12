@@ -1,10 +1,10 @@
 //
 //  FBFireStore.swift
-//  Signin With Apple
+//  TV2-projekt
 //
-//  Created by Stewart Lynch on 2020-03-18.
-//  Copyright © 2020 CreaTECH Solutions. All rights reserved.
+//  Created by Anders Biller Due on 12/03/2021.
 //
+
 import FirebaseFirestore
 
 enum FBFirestore {

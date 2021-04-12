@@ -7,25 +7,13 @@
 
 import SwiftUI
 
-struct Task : Encodable, Decodable {
+struct Task: Encodable, Decodable, Identifiable {
     var id: String
     var name: String
     var description: String
     var hint: String
     var solution: String
-    var answer: String?
     var point: Int
-    
-    
-    /*
-    var isDone: Bool {
-        if solution.uppercased() == answer.uppercased() {
-            return true
-        } else {
-            return false
-        }
-    }
-    */
     
     //Når der kreeres en
     init(name:String, description: String, hint:String, solution:String, point: Int) {

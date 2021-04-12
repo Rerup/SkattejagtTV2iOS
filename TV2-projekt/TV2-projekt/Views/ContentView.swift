@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var userInfo: UserInfo
+    @EnvironmentObject var userVM: UserVM
     var body: some View {
         Group {
-            if userInfo.isUserAuthenticated == .undefined {
+            if userVM.isUserAuthenticated == .undefined {
                 Text("Loading...")
-            } else if userInfo.isUserAuthenticated == .signedOut {
-                LoginView()
+            } else if userVM.isUserAuthenticated == .signedOut {
+                SignInView()
             } else {
                 HomeView() 
             }
         }
         .onAppear {
-            self.userInfo.configureFirebaseStateDidChange()
+            self.userVM.configureFirebaseStateDidChange()
         } 
     }
 }

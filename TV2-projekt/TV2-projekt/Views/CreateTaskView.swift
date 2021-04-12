@@ -8,33 +8,28 @@
 import SwiftUI
 
 struct CreateTaskView: View {
-    @State private var taskViewModel = TaskViewModel()
-    @State private var name = ""
-    @State private var description = ""
-    @State private var hint = ""
-    @State private var solution = ""
-    @State private var point = 0.0
+    @EnvironmentObject var taskViewModel: TaskVM
+    @State private var counter = 0.0
     var body: some View {
-        
         List {
             Section(header: Text("New task")) {
-                TextField("Name", text: $name)
-                TextField("Description", text: $description)
-                TextField("Solution", text: $solution)
-                TextField("Hint", text: $hint)
+                TextField("Name", text: $taskViewModel.name)
+                TextField("Description", text: $taskViewModel.description)
+                TextField("Solution", text: $taskViewModel.solution)
+                TextField("Hint", text: $taskViewModel.hint)
                 HStack {
-                    Slider(value: $point, in: 1...20, step: 1.0) {
+                    Slider(value: $counter, in: 1...20, step: 1.0) {
                         Text("Lenght")
                     }
                     Spacer()
-                    Text("\(Int(point))")
+                    Text("\(Int(counter))")
                 }
                 HStack {
                     Label("Add task", systemImage: "folder")
                     Spacer()
                     Button(action: {
                         withAnimation {
-                            taskViewModel.CreateTask(task: Task(name: name, description: description, hint: hint, solution: solution, point: Int(point)))
+                            taskViewModel.CreateTask()
                         }
                     }) {
                         Image(systemName: "plus.circle.fill")

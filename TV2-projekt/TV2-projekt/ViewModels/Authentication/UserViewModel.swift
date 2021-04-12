@@ -1,9 +1,8 @@
 //
 //  UserViewModel.swift
-//  Signin With Apple
+//  TV2-projekt
 //
-//  Created by Stewart Lynch on 2020-03-18.
-//  Copyright © 2020 CreaTECH Solutions. All rights reserved.
+//  Created by Anders Biller Due on 12/03/2021.
 //
 
 import Foundation
@@ -12,7 +11,10 @@ struct UserViewModel {
     var email: String = ""
     var password: String = ""
     var fullname: String = ""
+    var cid: String = ""
     var confirmPassword: String = ""
+    var totalPoints: Int = 0
+    var completedTasks: [String] = []
     
     // MARK: - Validation Checks
     

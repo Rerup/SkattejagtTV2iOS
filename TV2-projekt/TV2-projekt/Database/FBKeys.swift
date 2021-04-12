@@ -1,9 +1,8 @@
 //
 //  FBKeys.swift
-//  Signin With Apple
+//  TV2-projekt
 //
-//  Created by Stewart Lynch on 2020-03-18.
-//  Copyright © 2020 CreaTECH Solutions. All rights reserved.
+//  Created by Anders Biller Due on 12/03/2021.
 //
 
 import Foundation
@@ -17,6 +16,9 @@ enum FBKeys {
         static let uid = "uid"
         static let name = "name"
         static let email = "email"
+        static let cid = "cid"
+        static let totalPoints = "totalPoints"
+        static let completedTasks = "completedTasks"
         
         // Add app specific keys here
     }

@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		710F37A925F76BBF00F96030 /* CreateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37A825F76BBF00F96030 /* CreateTaskView.swift */; };
-		710F37AC25F76C1100F96030 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37AB25F76C1100F96030 /* TaskViewModel.swift */; };
+		710F37AC25F76C1100F96030 /* TaskVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37AB25F76C1100F96030 /* TaskVM.swift */; };
 		710F37B025F7848800F96030 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37AF25F7848800F96030 /* TaskRepository.swift */; };
-		710F37C425F8F42E00F96030 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37C325F8F42E00F96030 /* ScannerView.swift */; };
 		710F37CB25FB6CA200F96030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37CA25FB6CA200F96030 /* ContentView.swift */; };
 		710F37CE25FB6EC800F96030 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37CD25FB6EC800F96030 /* HomeView.swift */; };
-		710F37D325FB726100F96030 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37D225FB726100F96030 /* UserInfo.swift */; };
 		710F37D825FB785300F96030 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37D525FB785200F96030 /* ForgotPasswordView.swift */; };
 		710F37D925FB785300F96030 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37D625FB785300F96030 /* SignUpView.swift */; };
 		710F37DA25FB785300F96030 /* SignInWithEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37D725FB785300F96030 /* SignInWithEmailView.swift */; };
@@ -21,17 +19,23 @@
 		710F37E825FC12AB00F96030 /* FBKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37E425FC12A900F96030 /* FBKeys.swift */; };
 		710F37E925FC12AB00F96030 /* FBFireStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37E525FC12AA00F96030 /* FBFireStore.swift */; };
 		710F37EA25FC12AB00F96030 /* FBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37E625FC12AA00F96030 /* FBUser.swift */; };
-		710F37EB25FC12AB00F96030 /* FBFireStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F37E725FC12AB00F96030 /* FBFireStoreError.swift */; };
+		710F37EF25FC147E00F96030 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 710F37EE25FC147E00F96030 /* GoogleService-Info.plist */; };
+		710F381C25FFC84900F96030 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F381B25FFC84900F96030 /* TaskView.swift */; };
+		710F382226010BE400F96030 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F382126010BE400F96030 /* UserRepository.swift */; };
+		710F38252608A69500F96030 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F38242608A69400F96030 /* TaskRowView.swift */; };
+		710F38282608A7D000F96030 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F38272608A7D000F96030 /* TaskListView.swift */; };
+		710F382D2608AEB800F96030 /* TaskRowViewDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F382C2608AEB700F96030 /* TaskRowViewDone.swift */; };
+		710F3830261C413F00F96030 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F382F261C413E00F96030 /* UserVM.swift */; };
+		710F3833261C47FD00F96030 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F3832261C47FD00F96030 /* User.swift */; };
+		710F3838262087BB00F96030 /* FirebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F3837262087BB00F96030 /* FirebaseError.swift */; };
+		710F383F26236DA300F96030 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F383E26236DA200F96030 /* SignInView.swift */; };
 		715449CA25EE5D8D00C2A102 /* TV2_projektApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715449C925EE5D8D00C2A102 /* TV2_projektApp.swift */; };
-		715449CC25EE5D8D00C2A102 /* FrontpageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715449CB25EE5D8D00C2A102 /* FrontpageView.swift */; };
 		715449CE25EE5D9100C2A102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715449CD25EE5D9100C2A102 /* Assets.xcassets */; };
 		715449D125EE5D9100C2A102 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715449D025EE5D9100C2A102 /* Preview Assets.xcassets */; };
 		715449DE25EE5E4000C2A102 /* Color+Codeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715449DD25EE5E4000C2A102 /* Color+Codeable.swift */; };
 		715449E225EE5EB000C2A102 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715449E125EE5EB000C2A102 /* TestView.swift */; };
 		715449E725EE61E700C2A102 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 715449E625EE61E700C2A102 /* CodeScanner */; };
-		71550C0825F0D204000FACCE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71550C0725F0D204000FACCE /* User.swift */; };
 		71550C0B25F0D334000FACCE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71550C0A25F0D334000FACCE /* Task.swift */; };
-		71550C0E25F11C35000FACCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71550C0D25F11C35000FACCE /* GoogleService-Info.plist */; };
 		71550C1F25F11E2F000FACCE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71550C1E25F11E2F000FACCE /* LoginView.swift */; };
 		E79320DBC42C73CA57520AA3 /* Pods_TV2_projekt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8763C8CB3BC9A94A6481E65 /* Pods_TV2_projekt.framework */; };
 /* End PBXBuildFile section */
@@ -39,12 +43,10 @@
 /* Begin PBXFileReference section */
 		38C8C26CF790B8504EBF56CC /* Pods-TV2-projekt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TV2-projekt.release.xcconfig"; path = "Target Support Files/Pods-TV2-projekt/Pods-TV2-projekt.release.xcconfig"; sourceTree = "<group>"; };
 		710F37A825F76BBF00F96030 /* CreateTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskView.swift; sourceTree = "<group>"; };
-		710F37AB25F76C1100F96030 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		710F37AB25F76C1100F96030 /* TaskVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskVM.swift; sourceTree = "<group>"; };
 		710F37AF25F7848800F96030 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
-		710F37C325F8F42E00F96030 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		710F37CA25FB6CA200F96030 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		710F37CD25FB6EC800F96030 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		710F37D225FB726100F96030 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		710F37D525FB785200F96030 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		710F37D625FB785300F96030 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		710F37D725FB785300F96030 /* SignInWithEmailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithEmailView.swift; sourceTree = "<group>"; };
@@ -52,18 +54,24 @@
 		710F37E425FC12A900F96030 /* FBKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBKeys.swift; sourceTree = "<group>"; };
 		710F37E525FC12AA00F96030 /* FBFireStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFireStore.swift; sourceTree = "<group>"; };
 		710F37E625FC12AA00F96030 /* FBUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBUser.swift; sourceTree = "<group>"; };
-		710F37E725FC12AB00F96030 /* FBFireStoreError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFireStoreError.swift; sourceTree = "<group>"; };
+		710F37EE25FC147E00F96030 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		710F381B25FFC84900F96030 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		710F382126010BE400F96030 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		710F38242608A69400F96030 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		710F38272608A7D000F96030 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		710F382C2608AEB700F96030 /* TaskRowViewDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowViewDone.swift; sourceTree = "<group>"; };
+		710F382F261C413E00F96030 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
+		710F3832261C47FD00F96030 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		710F3837262087BB00F96030 /* FirebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseError.swift; sourceTree = "<group>"; };
+		710F383E26236DA200F96030 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		715449C625EE5D8D00C2A102 /* TV2-projekt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TV2-projekt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		715449C925EE5D8D00C2A102 /* TV2_projektApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV2_projektApp.swift; sourceTree = "<group>"; };
-		715449CB25EE5D8D00C2A102 /* FrontpageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontpageView.swift; sourceTree = "<group>"; };
 		715449CD25EE5D9100C2A102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		715449D025EE5D9100C2A102 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		715449D225EE5D9100C2A102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		715449DD25EE5E4000C2A102 /* Color+Codeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codeable.swift"; sourceTree = "<group>"; };
 		715449E125EE5EB000C2A102 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		71550C0725F0D204000FACCE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		71550C0A25F0D334000FACCE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		71550C0D25F11C35000FACCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71550C1E25F11E2F000FACCE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7E5C0C6603EA04B39E4971D6 /* Pods-TV2-projekt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TV2-projekt.debug.xcconfig"; path = "Target Support Files/Pods-TV2-projekt/Pods-TV2-projekt.debug.xcconfig"; sourceTree = "<group>"; };
 		D8763C8CB3BC9A94A6481E65 /* Pods_TV2_projekt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TV2_projekt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +97,7 @@
 				710F37D725FB785300F96030 /* SignInWithEmailView.swift */,
 				710F37D625FB785300F96030 /* SignUpView.swift */,
 				710F37D525FB785200F96030 /* ForgotPasswordView.swift */,
+				710F383E26236DA200F96030 /* SignInView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -97,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				710F37DC25FB786700F96030 /* UserViewModel.swift */,
+				710F382F261C413E00F96030 /* UserVM.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -105,18 +115,42 @@
 			isa = PBXGroup;
 			children = (
 				710F37E525FC12AA00F96030 /* FBFireStore.swift */,
-				710F37E725FC12AB00F96030 /* FBFireStoreError.swift */,
 				710F37E425FC12A900F96030 /* FBKeys.swift */,
-				710F37E625FC12AA00F96030 /* FBUser.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		710F381425FFC4A100F96030 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				710F37AB25F76C1100F96030 /* TaskVM.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		710F381A25FFC83300F96030 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				710F381B25FFC84900F96030 /* TaskView.swift */,
+				710F38242608A69400F96030 /* TaskRowView.swift */,
+				710F38272608A7D000F96030 /* TaskListView.swift */,
+				710F382C2608AEB700F96030 /* TaskRowViewDone.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		710F38362620877E00F96030 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				710F3837262087BB00F96030 /* FirebaseError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		715449BD25EE5D8D00C2A102 = {
 			isa = PBXGroup;
 			children = (
 				715449C825EE5D8D00C2A102 /* TV2-projekt */,
-				715449C725EE5D8D00C2A102 /* Products */,
 				966A4364389D6589E9F6E222 /* Pods */,
 				B648C773F3C095CD013997C3 /* Frameworks */,
 			);
@@ -128,22 +162,24 @@
 				715449C625EE5D8D00C2A102 /* TV2-projekt.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		715449C825EE5D8D00C2A102 /* TV2-projekt */ = {
 			isa = PBXGroup;
 			children = (
+				710F38362620877E00F96030 /* Error */,
 				710F37E325FC11E700F96030 /* Database */,
 				71550C3625F28368000FACCE /* Repository */,
 				715449DC25EE5E1D00C2A102 /* ViewModels */,
 				715449DB25EE5E1800C2A102 /* Views */,
 				715449DA25EE5E1200C2A102 /* Models */,
 				715449C925EE5D8D00C2A102 /* TV2_projektApp.swift */,
-				71550C0D25F11C35000FACCE /* GoogleService-Info.plist */,
 				715449CD25EE5D9100C2A102 /* Assets.xcassets */,
 				715449D225EE5D9100C2A102 /* Info.plist */,
+				710F37EE25FC147E00F96030 /* GoogleService-Info.plist */,
 				715449CF25EE5D9100C2A102 /* Preview Content */,
-				710F37D225FB726100F96030 /* UserInfo.swift */,
+				715449C725EE5D8D00C2A102 /* Products */,
 			);
 			path = "TV2-projekt";
 			sourceTree = "<group>";
@@ -159,9 +195,10 @@
 		715449DA25EE5E1200C2A102 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				710F37E625FC12AA00F96030 /* FBUser.swift */,
 				715449DD25EE5E4000C2A102 /* Color+Codeable.swift */,
-				71550C0725F0D204000FACCE /* User.swift */,
 				71550C0A25F0D334000FACCE /* Task.swift */,
+				710F3832261C47FD00F96030 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,11 +206,10 @@
 		715449DB25EE5E1800C2A102 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				710F381A25FFC83300F96030 /* Task */,
 				710F37DF25FB789800F96030 /* Authentication */,
-				715449CB25EE5D8D00C2A102 /* FrontpageView.swift */,
 				715449E125EE5EB000C2A102 /* TestView.swift */,
 				710F37A825F76BBF00F96030 /* CreateTaskView.swift */,
-				710F37C325F8F42E00F96030 /* ScannerView.swift */,
 				710F37CA25FB6CA200F96030 /* ContentView.swift */,
 				710F37CD25FB6EC800F96030 /* HomeView.swift */,
 			);
@@ -183,8 +219,8 @@
 		715449DC25EE5E1D00C2A102 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				710F381425FFC4A100F96030 /* Task */,
 				710F37E225FC11AB00F96030 /* Authentication */,
-				710F37AB25F76C1100F96030 /* TaskViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -193,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				710F37AF25F7848800F96030 /* TaskRepository.swift */,
+				710F382126010BE400F96030 /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -281,7 +318,7 @@
 			files = (
 				715449D125EE5D9100C2A102 /* Preview Assets.xcassets in Resources */,
 				715449CE25EE5D9100C2A102 /* Assets.xcassets in Resources */,
-				71550C0E25F11C35000FACCE /* GoogleService-Info.plist in Resources */,
+				710F37EF25FC147E00F96030 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,21 +372,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				715449E225EE5EB000C2A102 /* TestView.swift in Sources */,
-				710F37AC25F76C1100F96030 /* TaskViewModel.swift in Sources */,
+				710F37AC25F76C1100F96030 /* TaskVM.swift in Sources */,
+				710F38252608A69500F96030 /* TaskRowView.swift in Sources */,
 				71550C1F25F11E2F000FACCE /* LoginView.swift in Sources */,
 				710F37E925FC12AB00F96030 /* FBFireStore.swift in Sources */,
 				710F37D825FB785300F96030 /* ForgotPasswordView.swift in Sources */,
-				715449CC25EE5D8D00C2A102 /* FrontpageView.swift in Sources */,
-				710F37D325FB726100F96030 /* UserInfo.swift in Sources */,
-				710F37C425F8F42E00F96030 /* ScannerView.swift in Sources */,
 				715449CA25EE5D8D00C2A102 /* TV2_projektApp.swift in Sources */,
 				710F37E825FC12AB00F96030 /* FBKeys.swift in Sources */,
 				710F37B025F7848800F96030 /* TaskRepository.swift in Sources */,
-				71550C0825F0D204000FACCE /* User.swift in Sources */,
-				710F37EB25FC12AB00F96030 /* FBFireStoreError.swift in Sources */,
 				710F37EA25FC12AB00F96030 /* FBUser.swift in Sources */,
 				710F37CB25FB6CA200F96030 /* ContentView.swift in Sources */,
+				710F382D2608AEB800F96030 /* TaskRowViewDone.swift in Sources */,
+				710F383F26236DA300F96030 /* SignInView.swift in Sources */,
+				710F382226010BE400F96030 /* UserRepository.swift in Sources */,
+				710F3830261C413F00F96030 /* UserVM.swift in Sources */,
+				710F3838262087BB00F96030 /* FirebaseError.swift in Sources */,
 				710F37A925F76BBF00F96030 /* CreateTaskView.swift in Sources */,
+				710F38282608A7D000F96030 /* TaskListView.swift in Sources */,
+				710F381C25FFC84900F96030 /* TaskView.swift in Sources */,
+				710F3833261C47FD00F96030 /* User.swift in Sources */,
 				710F37DD25FB786700F96030 /* UserViewModel.swift in Sources */,
 				710F37CE25FB6EC800F96030 /* HomeView.swift in Sources */,
 				71550C0B25F0D334000FACCE /* Task.swift in Sources */,

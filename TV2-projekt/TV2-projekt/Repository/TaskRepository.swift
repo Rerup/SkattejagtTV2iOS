@@ -5,16 +5,41 @@
 //  Created by Anders Biller Due on 09/03/2021.
 //
 
-import SwiftUI
-import Firebase
-import FirebaseDatabase
+import Foundation
+import FirebaseFirestore
 
-let databaseRef = Database.database().reference()
+let taskRef = db.collection("tasks")
 
 struct TaskRepository {
     
     func createTask (task: Task) {
-        databaseRef.child("tasks").child(task.id).setValue(["name": task.name, "description": task.description, "hint": task.hint, "solution": task.solution, "point": task.point])
+        db.collection("tasks").document(task.id).setData([
+            "id": task.id,
+            "name": task.name,
+            "description": task.description,
+            "hint": task.hint,
+            "point": task.point,
+            "solution": task.solution
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
     }
+    
+   /* func retriveTasks() -> [Task] {
+        let listOfTasks: [Task] = taskRef.getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
+    }
+ */
     
 }

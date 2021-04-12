@@ -2,25 +2,25 @@
 //  User.swift
 //  TV2-projekt
 //
-//  Created by Anders Biller Due on 04/03/2021.
+//  Created by Anders Biller Due on 06/04/2021.
 //
 
 import SwiftUI
 
-class User {
-    let id: String
-    var email: String?
-    var displayName: String?
-    var firstname: String
-    var lastname: String
-    var point: Int = 0
-    var doneTasks: [String] = []
+struct User: Encodable, Decodable {
+    let uid: String
+    let name: String
+    let email: String
+    let cid: String
+    let totalPoints: Int
+    let completedTasks: [String]
     
-    init(id: String, email: String?, displayName:String?, firstname:String, lastname: String) {
-        self.id = id
+    init(uid: String, name:String, email: String, cid:String, totalPoints:Int, completedTasks: [String] ) {
+        self.uid = uid
+        self.name = name
         self.email = email
-        self.displayName = displayName
-        self.firstname = firstname
-        self.lastname = lastname
+        self.cid = cid
+        self.totalPoints = totalPoints
+        self.completedTasks = completedTasks
     }
 }

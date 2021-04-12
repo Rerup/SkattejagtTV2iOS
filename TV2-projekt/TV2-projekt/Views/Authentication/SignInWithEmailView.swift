@@ -1,18 +1,21 @@
 //
 //  SignInWithEmailView.swift
-//  Signin With Apple
+//  TV2-projekt
 //
-//  Created by Stewart Lynch on 2020-03-19.
-//  Copyright © 2020 CreaTECH Solutions. All rights reserved.
+//  Created by Anders Biller Due on 12/03/2021.
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SignInWithEmailView: View {
-    @EnvironmentObject var userInfo: UserInfo
+    @EnvironmentObject var userVM: UserVM
     @State var user: UserViewModel = UserViewModel()
     @Binding var showSheet: Bool
     @Binding var action:LoginView.Action?
+    
+    @State private var showAlert = false
+    @State private var authError: EmailAuthError?
     var body: some View {
         VStack {
             TextField("Email Address",
@@ -31,7 +34,15 @@ struct SignInWithEmailView: View {
             }.padding(.bottom)
             VStack(spacing: 10) {
                 Button(action: {
-                    // Sign In Action
+                    userVM.authenticate(withEmail: self.user.email, password: self.user.password) { (result) in
+                        switch result {
+                        case .failure(let error):
+                            self.authError = error
+                            self.showAlert = true
+                        case .success( _):
+                            print("Signed in")
+                        }
+                    }
                 }) {
                     Text("Login")
                         .padding(.vertical, 15)
@@ -52,6 +63,16 @@ struct SignInWithEmailView: View {
                         .cornerRadius(8)
                         .foregroundColor(.white)
                 }
+            }
+            .alert(isPresented: $showAlert) {
+                Alert(title:  Text("Login Error"), message: Text(self.authError?.localizedDescription ?? "Unknown"), dismissButton: .default(Text("OK")) {
+                    if self.authError == .incorrectPassword {
+                        self.user.password = ""
+                    } else {
+                        self.user.email = ""
+                        self.user.password = ""
+                    }
+                })
             }
         }
         .padding(.top, 100)

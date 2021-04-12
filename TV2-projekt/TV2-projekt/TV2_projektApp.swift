@@ -7,10 +7,15 @@
 
 import SwiftUI
 import Firebase
+import FirebaseFirestore
+
+let db = Firestore.firestore()
+let userRepository = UserRepository()
 
 @main
 struct TV2_projektApp: App {
-    var userInfo = UserInfo()
+    var taskViewModel = TaskVM()
+    var userVM = UserVM()
     
     init() {
         FirebaseApp.configure()
@@ -18,7 +23,7 @@ struct TV2_projektApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(userInfo)
+            ContentView().environmentObject(userVM).environmentObject(taskViewModel)
         }
     }
 }

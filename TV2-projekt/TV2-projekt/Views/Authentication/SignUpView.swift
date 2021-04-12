@@ -1,18 +1,17 @@
 //
-//  SignUpView.swift
-//  Signin With Apple
+//  TV2-projekt
 //
-//  Created by Stewart Lynch on 2020-03-19.
-//  Copyright © 2020 CreaTECH Solutions. All rights reserved.
+//  Created by Anders Biller Due on 12/03/2021.
 //
 
 import SwiftUI
 
 struct SignUpView: View {
-    @EnvironmentObject var userInfo: UserInfo
+    @EnvironmentObject var userVM: UserVM
     @State var user: UserViewModel = UserViewModel()
     @Environment(\.presentationMode) var presentationMode
-
+    @State private var showError = false
+    @State private var errorString = ""
     var body: some View {
         NavigationView {
             VStack {
@@ -30,6 +29,9 @@ struct SignUpView: View {
                         }
                     }
                     VStack(alignment: .leading) {
+                        TextField("Enter TV2 id", text: self.$user.cid)
+                    }
+                    VStack(alignment: .leading) {
                         SecureField("Password", text: self.$user.password)
                         if !user.validPasswordText.isEmpty {
                             Text(user.validPasswordText).font(.caption).foregroundColor(.red)
@@ -45,7 +47,15 @@ struct SignUpView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 VStack(spacing: 20 ) {
                     Button(action: {
-                        // Signup
+                        userVM.createUser(withEmail: self.user.email, name: self.user.fullname, password: self.user.password, cid: self.user.cid, totalPoints: 0, completedTasks: self.user.completedTasks) { (result) in
+                            switch result {
+                            case .failure(let error):
+                                self.errorString = error.localizedDescription
+                                self.showError = true
+                            case.success( _):
+                                print("Account creation succesful")
+                            }
+                        }
                         
                     }) {
                         Text("Register")
@@ -60,6 +70,9 @@ struct SignUpView: View {
                     Spacer()
                 }.padding()
             }.padding(.top)
+            .alert(isPresented: $showError) {
+                Alert(title: Text("Error creating account"), message: Text(self.errorString), dismissButton: .default(Text("OK")))
+            }
                 .navigationBarTitle("Sign Up", displayMode: .inline)
                 .navigationBarItems(trailing: Button("Dismiss") {
                     self.presentationMode.wrappedValue.dismiss()
